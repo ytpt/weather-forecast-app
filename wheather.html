@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/>
+    <title>Weather</title>
+    <link rel="stylesheet" href="weather.css">
+</head>
+<body>
+    <div class="wrapper">
+        <form class="search-line">
+            <input type="text" placeholder="Aktobe" id="enterCity">
+        </form>
+        <button type="button" id="search" onclick="clickSearchBtn()">
+            <i class="fas fa-search"></i>  
+        </button>    
+        <div class="content">
+            <!--Btn NOW onclick--> 
+            <div class="weather" id="weather">
+                <div class="weather-conditions tab-window" id="tab-window-now">
+                    <p class="nowTemp">14&#176;</p>
+                    <img class="nowIcon" src="img/icons-cloud.png" width="65" height="59" alt="Cloud">
+                    <div class="choosen-city">
+                        <span id="city">Aktobe</span>
+                        <button type="button" id="heart" onclick="clickHeartBtn()">
+                            <i class="far fa-heart" id="heartIcon"></i>
+                        </button>
+                    </div>       
+                </div>    
+                <div class="tab-window" id="tab-window-details"></div>
+                <div class="tab-window" id="tab-window-forecast"></div>  
+                <div class="tabs">
+                    <button class="btn active" type="radio" id="nowBtn" data-window="tab-window-now">Now</button>
+                    <button class="btn" type="radio" id="detailsBtn" data-window="tab-window-details">Details</button>
+                    <button onclick="clickForecastBtn()" class="btn" type="radio" id="forecastBtn" data-window="tab-window-forecast">Forecast</button>
+                </div>
+            </div>
+            <div class="locations">
+                <div class="added">
+                    <p>Added locations:</p>
+                </div>
+                <ul id="cities">
+                    <li class="favCity">Amur</li>
+                    <li class="favCity">Samara</li>
+                    <li class="favCity">Bali</li>
+                    <li class="favCity">Dane</li>
+                    <li class="favCity">Kilo</li>
+                    <li class="favCity">Nur-Sultan</li>
+                </ul>
+            </div>
+        </div> 
+    </div>
+    <script src="weather.js"></script>
+</body>
+</html>

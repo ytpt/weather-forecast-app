@@ -1,0 +1,254 @@
+input:focus::-webkit-input-placeholder { color:transparent; }
+input:focus:-moz-placeholder { color:transparent; } /* FF 4-18 */
+input:focus::-moz-placeholder { color:transparent; } /* FF 19+ */
+input:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
+
+* {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    padding: 0;
+    margin: 0;
+}
+
+.wrapper {
+    position: relative;
+    margin: 50px auto;
+    padding: 0;
+    width: 621px;
+    height: auto;
+    background: #fff;
+}
+
+.search-line input {
+    width: 97%;
+    color: #696969;
+    font-size: 18px;
+    line-height: 21px;
+    padding: 11px 0 13px 16px;
+}
+
+#search {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    color:#696969;
+    cursor: pointer;
+    border: none;
+    background: transparent;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.weather {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    border-top: none;
+}
+
+.weather-conditions p {
+    font-size: 70px;
+    line-height: 82px;
+    padding: 20px 0 0 23px;
+}
+
+.weather-conditions img {
+    display: block;
+    margin: 40px auto;
+}
+
+.tab-window{
+    display: none;
+}
+
+.tab-window:first-child{
+    display: block;
+}
+
+.choosen-city span {
+    font-size: 24px;
+    line-height: 28px;
+}
+
+.city-details {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    border-top: none;
+}
+
+.city-details span {
+    margin: 33px 0 0 17px;
+    font-size: 24px;
+    line-height: 28px;
+}
+
+.city-details p {
+    font-size: 24px;
+    line-height: 28px;
+    padding-bottom: 10px;
+}
+
+.locations {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+}
+
+.added {
+    border: 1px solid black;
+    border-right: none;
+    border-top: none;
+    border-left: none;
+    font-size: 24px;
+    line-height: 28px;
+    padding: 33px 0 7px 18px;
+}
+
+.choosen-city {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 58px 26px 17px 12px; 
+}
+
+#cities{
+    padding-left: 18px;
+    padding-top: 35px;
+    font-size: 24px;
+    line-height: 28px;
+    height: 30vh;
+    overflow-y: scroll;
+}
+
+#cities li {
+    padding-bottom: 17px;
+    cursor: pointer;
+}
+
+#heart {
+    cursor: pointer;
+    opacity: 54%;
+    border: none;
+    background: transparent;
+}
+
+#heart:hover {
+    color: red;
+}
+
+.tabs {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 0;
+}
+
+.btn {
+    background: #fff;
+    color: black;
+}
+
+.btn.active{
+    background-color: #000;
+    color: white;
+}
+
+.tabs button:first-child,
+.tabs button:nth-child(3) {
+    border-right: none;
+    border-left: none;
+}
+
+.tabs button {
+    cursor: pointer;
+    border-bottom: none;
+    font-size: 18px;
+    line-height: 21px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+.favCity {
+    list-style-type: none;
+}
+
+.favCity:hover {
+    background: rgb(238, 247, 248);
+}
+
+.cross {
+    cursor: pointer;
+    background: transparent;
+    transform: rotate(45deg);
+    border: none;
+    font-size: 25px;
+    float: right;
+    margin-right: 15px;
+}
+
+.details-content {
+    display: flex;
+    flex-direction: column;
+    padding: 33px 0 36px 15px;
+}
+
+.detailsCity {
+    font-size: 24px;
+    line-height: 28px;
+    margin-bottom: 42px;
+}
+
+.details {
+    font-size: 24px;
+    line-height: 28px;
+    list-style-type: none;
+}
+
+.details li {
+    padding-bottom: 17px;
+}
+
+#tab-window-forecast {
+    height: 39vh;
+    overflow-y: scroll;
+}
+
+.forecastBlock {
+    border: 1px solid black;
+    margin: 7px 16px 9px 18px;
+    font-size: 18px;
+    line-height: 21px;
+}
+
+.forecastContent{
+    padding-top: 33px;
+}
+
+.forecastCity {
+    font-size: 24px;
+    line-height: 28px;
+    margin-left: 18px;
+}
+
+.dateTime, .tempImg {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.dateTime {
+    margin: 6px 12px 34px 8px;
+}
+
+.forecastTemp {
+    list-style-type: none;
+}
+
+.tempImg {
+    margin: 6px 12px 0 8px;
+}
+
